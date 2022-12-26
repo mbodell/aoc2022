@@ -1,0 +1,29 @@
+const lineReader = require("line-reader");
+const Promise = require('bluebird');
+
+const eachLine = Promise.promisify(lineReader.eachLine);
+
+let filename = process.argv.slice(2)[0] || 'input.txt';
+
+let answer = 0;
+let elves = [];
+let curCount = 0;
+
+eachLine(filename, function(line) {
+  if (line === "") {
+    if( curCount > answer) {
+      elves.push(curCount);
+    }
+    curCount = 0;
+  } else {
+    curCount = curCount + parseInt(line);
+  }
+
+}).then(function(err) {
+  elves.push(curCount);
+  elves.sort((a,b)=>b-a);
+  console.log(elves);
+  answer = elves[0]+elves[1]+elves[2];
+
+  console.log(answer);
+});
