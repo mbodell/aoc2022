@@ -1,0 +1,26 @@
+{
+  "name": "day",
+  "version": "1.0.0",
+  "description": "Day 14 of Advent of Code 2022",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbodell/aoc2022.git"
+  },
+  "keywords": [
+    "aoc"
+  ],
+  "author": "Michael Bodell",
+  "license": "ISC",
+  "dependencies": {
+    "blackbird": "0.0.3",
+    "bluebird": "^3.7.2",
+    "line-reader": "^0.4.0",
+    "read-line": "^0.1.2",
+    "require": "^2.4.20"
+  },
+  "bugs": {
+    "url": "https://github.com/mbodell/aoc2022/issues"
+  },
+  "homepage": "https://github.com/mbodell/aoc2022#readme"
+}
